@@ -1,10 +1,21 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', serif; /* Fuente más formal y elegante */
     margin: 0;
     padding: 0;
-    text-align: center;  /* Alineación del texto por defecto */
+    text-align: center;
+    background-color: #000000; /* Fondo negro */
+    color: white; /* Texto blanco para contraste */
 }
 
+/* Barra horizontal decorativa */
+.barra-horizontal {
+    height: 4px;
+    background: linear-gradient(90deg, #fff, #888, #fff);
+    margin: 20px 0;
+    border: none;
+}
+/* CSS */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,13 +25,44 @@ body {
     padding: 15px 20px;
     font-size: 20px;
     font-weight: bold;
+    position: relative; /* Para posicionar la barra horizontal */
 }
 
-.nav-items {
+/* Barra horizontal decorativa bajo el navbar */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+
+/* Separadores verticales entre elementos del menú */
+.navbar ul li:not(:last-child)::after {
+    content: "|";
+    color: white;
+    margin: 0 15px;
+    font-weight: normal;
+}
+
+.navbar ul {
     display: flex;
-    gap: 20px; /* Espacio entre los elementos */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #cccccc;
+}
 .menu {
     margin-top: 10px;
     background-color: #000000;
@@ -43,7 +85,7 @@ body {
 .relojes-link {
     cursor: pointer;
     font-size: 20px;
-    color: #007bff;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -51,6 +93,63 @@ body {
     margin: 20px 0;
     font-size: 32px;
     font-weight: bold;
-    text-align: center; /* Centrado del texto */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    text-align: center;
+    width: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.carousel {
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Botones de navegación del carrusel */
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre la imagen y el texto */
+    max-width: 900px;
+    margin: auto;
+}
+.container1 {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espacio entre la imagen y el texto */
+    max-width: 1000px;
+    margin: auto;
+}
+.container img {
+    /* Ajusta el tamaño de la imagen */
+  
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+.container .text {
+    flex: 1; /* El texto toma el espacio restante */
+    font-size: 18px;
 }

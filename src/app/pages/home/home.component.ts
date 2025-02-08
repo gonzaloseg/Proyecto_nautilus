@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
+ 
+  currentIndex: number = 0;
+
+
   menuVisible: boolean = false;
 
   // Método para alternar la visibilidad del menú
