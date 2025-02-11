@@ -8,9 +8,10 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { UnisexComponent } from './pages/unisex/unisex.component';
 import { NovedadesComponent } from './pages/novedades/novedades.component';
 import { ContactaComponent } from './pages/contacta/contacta.component';
+import { RelojesComponent } from './pages/relojes/relojes.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'cesta', component: CestaComponent },
   { path: 'hombre', component: HombreComponent },
   { path: 'mujer', component: MujerComponent },
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'unisex', component: UnisexComponent },
   { path: 'novedades', component: NovedadesComponent },
   { path: 'contacta', component: ContactaComponent },
+  { path: 'relojes', component: RelojesComponent },
+  
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirección en caso de ruta no encontrada
 ];
 

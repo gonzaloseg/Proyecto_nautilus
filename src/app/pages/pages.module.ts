@@ -8,6 +8,10 @@ import { NovedadesComponent } from './novedades/novedades.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HomeComponent } from './home/home.component';
 import { UnisexComponent } from './unisex/unisex.component';
+import { RelojesComponent } from './relojes/relojes.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,10 +24,16 @@ import { UnisexComponent } from './unisex/unisex.component';
     NovedadesComponent,
     CestaComponent,
     HomeComponent,
-    UnisexComponent
+    UnisexComponent,
+    RelojesComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+    
+
   ],
   exports:[
     ContactaComponent,
@@ -33,7 +43,10 @@ import { UnisexComponent } from './unisex/unisex.component';
     NovedadesComponent,
     CestaComponent,
     HomeComponent,
-    UnisexComponent
+    UnisexComponent,
+    RelojesComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class PagesModule { }

@@ -1,17 +1,8 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K" crossorigin="anonymous"></script>
 <head>
-<div class="navbar">
-  <nav>
-      <ul>      
-          <li><a routerLink="nosotros" routerLinkActive="active">Nautilus</a></li>
-          <li><a routerLink="contacta" routerLinkActive="active">contacta</a></li>
-          <li><a routerLink="cesta" routerLinkActive="active">cesta</a></li>
-          <li><a routerLink="relojes" routerLinkActive="active">relojes</a></li>
-      </ul>
-  </nav>
-</div>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -88,33 +79,20 @@
         </div>
     </div>
     <div class="barra-horizontal"></div>
-    <footer>
-        <div class="footer">
-          
-            <div>
-                <h3>About us</h3>
-                <label>We are a team of passionate people whose goal is to improve everyone's life through disruptive products.</label>
-                <label>Our products are designed for small to medium size companies willing to optimize their performance.</label>
-            </div>
-
-            <div>
-                <h3>Connect with us</h3>
-                <p>💬 <a href="#">contacta</a></p>
-                <p>📧 <a href="mailto:nautliusSL@gmail.com">nautliusSLgmail.com</a></p>
-                <p>📞 +1 555-555-5556</p>
-                <div class="social-icons">
-                    <a href="#">🔵</a>
-                    <a href="#">🔷</a>
-                    <a href="#">🔗</a>
-                    <a href="#">🏠</a>
-                </div>
-            </div>
+    <div class="container">
+        <iframe 
+          *ngIf="videoUrl" 
+          [src]="videoUrl" 
+          width="700" 
+          height="400" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+        <div class="text">
+            <h2>Proceso de frabricación</h2>
+            <p>Para cada uno de nuestros relojes dejamos grabados nuestra firma ya que le dedicamos un tiempo especial a cada uno de ellos prestando fiel atención al detalle y al posterior difrute del cliente</p>
         </div>
-        
-        <div class="copyright">
-            Copyright © Nautilus
-        </div>
-    </footer>
-
-
+      </div>
+    <div class="barra-horizontal"></div>
+    
 </body>
