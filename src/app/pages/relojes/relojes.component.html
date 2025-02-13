@@ -1,7 +1,21 @@
 <h1>Relojes</h1>
 
 <!-- Botones de Categorías -->
-<div>
-    <a [routerLink]="['profesionales']" routerLinkActive="active">Profesionales</a>
-    <a [routerLink]="['clasicos']" routerLinkActive="active">Clásicos</a>
-</div>
+
+<body>
+    <h1>Todos nuestro relojes</h1>
+    <div>
+        <a [routerLink]="['profesionales']" routerLinkActive="active">Profesionales</a>
+        <a [routerLink]="['clasicos']" routerLinkActive="active">Clásicos</a>
+        
+    </div>
+   <ul>
+    <li *ngFor="let producto of productos">
+      <img [src]="producto.imagen" alt="{{ producto.nombre }}" width="50" height="400">
+      <h3>{{ producto.nombre }}</h3>
+      <p>Precio: ${{ producto.precio }}</p>
+      <a [routerLink]="['relojes/producto', producto.id]">Ver detalles</a>
+    </li>
+  </ul> 
+  </body>
+  
