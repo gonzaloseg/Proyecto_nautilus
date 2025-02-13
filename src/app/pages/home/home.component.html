@@ -1,41 +1,71 @@
 <head>
 
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <h1 class="title">Nautilus</h1>
-
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/imagenes/img3.jpg" class="d-block w-100"  width="700px" height="1000px">
+  <div class="inicio-container" routerLink="/clasico" routerLinkActive="active">
+    <br>
+    <br>
+    <div class="contenido-principal">
+      <div class="imagen1">
+        <img src="/imagenes/img1.jpg" alt="Imagen de los clasicos" />
       </div>
-      <div class="carousel-item">
-        <img src="/imagenes/img2.jpeg" class="d-block w-100" width="700px" height="1000px">
-      </div>
-      <div class="carousel-item">
-        <img src="/imagenes/img1.jpg" class="d-block w-100" width="700px" height="1000px">
+      <div class="contenido-introduccion">
+        <h2>nuestro estilo mas clasico</h2>
+        <p>
+          Si eres un amante de lo clasico esta es tu sección
+          contamos con una gran variedad de relojes al mas puro
+          estilo clasico.
+        </p>
       </div>
     </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden"></span>
-    </button>
+  </div>
+  <div class="inicio-container" routerLink="/formales" routerLinkActive="active">
+    <br>
+    <br>
+    <div class="contenido-principal">
+      <div class="contenido-introduccion">
+        <h2>nuestros modelos mas formales</h2>
+        <p>
+         En esta sección encontraras modelos para ocasiones formales
+         y para todos los gustos ademas encontras relojes exclusivos 
+         de nuestra marca con unidades limitadas de estos.
+        </p>
+      </div>
+      <div class="imagen1" >
+        <img src="/imagenes/img2.jpeg" alt="Imagen de los formales" />
+      </div>
+    </div>
+  </div>
+  <div class="inicio-container" routerLink="/deportivos" routerLinkActive="active">
+    <br>
+    <br>
+    <div class="contenido-principal">
+      <div class="imagen1">
+        <img src="/imagenes/1366_2000.jpg" alt="Imagen de los deportivos" />
+      </div>
+      <div class="contenido-introduccion">
+        <h2>nuestro lado off-road</h2>
+        <p>
+          Atrevido y sin miedo a nada esto es para ti, encontraras
+          modelos de nuestros relojes que podras llevarlo a lo maximo 
+          que puedan ofrecerte sin siquiera notarlo
+        </p>
+      </div>
+    </div>
   </div>
   
+
+  <div class="barra-horizontal"></div>
+
+
   <h1 class="title">Novedades</h1>
   <div class="container">
     <div class="row">
@@ -49,7 +79,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Producto 2 -->
       <div class="col-md-3">
         <div class="card text-center">
@@ -60,7 +90,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Producto 3 -->
       <div class="col-md-3">
         <div class="card text-center">
@@ -71,11 +101,12 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Producto 4 -->
       <div class="col-md-3">
         <div class="card text-center">
-          <img src="/imagenes/rolex-cosmograph-daytona-116500ln-esfera-blanca-completo-id14815-1602771559.png" class="card-img-top" height="250px">
+          <img src="/imagenes/rolex-cosmograph-daytona-116500ln-esfera-blanca-completo-id14815-1602771559.png"
+            class="card-img-top" height="250px">
           <div class="card-body">
             <h5 class="card-title">Modelo 4352XFV</h5>
             <p class="card-text">1000€</p>
@@ -84,16 +115,14 @@
       </div>
     </div>
   </div>
-  
-
   <div class="barra-horizontal"></div>
   <div class="container1">
-    <img src="/imagenes/4xUJkL06hYp8k7ibiiPEr4.webp"  width="700px" >
-    <div class="text">
+    <div class="image-wrapper">
+      <img src="/imagenes/4xUJkL06hYp8k7ibiiPEr4.webp" width="1300px">
+      <div class="text">
         <h2>BestSeller</h2>
         <p>nuestro modelo GTS2245.</p>
+      </div>
     </div>
-</div>
-<div class="barra-horizontal"></div>
-
+  </div>
 </body>
