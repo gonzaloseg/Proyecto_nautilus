@@ -1,138 +1,104 @@
-/* Estilo general para el contenedor del producto */
-.product-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Estilos para el contenedor de la imagen y la información */
-  .product-details {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-  }
-  
-  /* Carrusel de las imágenes */
-  .carousel-container {
-    position: relative;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-wrapper {
-    max-width: 500px;
-    max-height: 500px;
-    overflow: hidden;
-  }
-  
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Botones del carrusel */
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 2;
-  }
-  
-  .carousel-btn.left {
-    left: 10px;
-  }
-  
-  .carousel-btn.right {
-    right: 10px;
-  }
-  
-  /* Indicadores del carrusel */
-  .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 5px;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .indicator.active {
-    background-color: rgba(0, 0, 0, 1);
-  }
-  
-  /* Información del producto */
-  .product-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .product-info h2 {
-    font-size: 24px;
-    margin: 0 0 10px;
-  }
-  
-  .price {
-    font-size: 22px;
+/* Estilo para el título */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
     font-weight: bold;
-    color: #4CAF50;
-    margin: 5px 0;
+    margin-bottom: 20px;
   }
   
-  .product-info p {
-    font-size: 16px;
-    margin: 5px 0;
+  /* Contenedor de los botones */
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   
-  .product-info .add-to-cart {
-    padding: 12px 20px;
-    margin-top: 20px;
-    font-size: 18px;
-    background-color: #4CAF50;
+  /* Estilo para los enlaces (botones) */
+  a {
+    text-decoration: none;
+    background-color: #007bff;
     color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease-in-out;
   }
   
-  .product-info .add-to-cart:hover {
-    background-color: #45a049;
+  /* Efecto hover */
+  a:hover {
+    background-color: #0056b3;
   }
   
-  /* Descripción del producto */
-  .product-description {
-    margin-top: 30px;
+  /* Estilo para el enlace activo */
+  a.active {
+    background-color: #28a745;
   }
-  
-  .product-description h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .product-description p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
+  /* Contenedor de la lista */
+
+body{
+  background-color: black;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cada tarjeta de producto */
+li {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en la tarjeta */
+li:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen del producto */
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Nombre del producto */
+h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Precio */
+p {
+  font-size: 1.1rem;
+  color: #4b4f53;
+  font-weight: bold;
+}
+
+/* Botón de detalles */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #2a312c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Efecto hover en el botón */
+a:hover {
+  background: #2e312f;
+}

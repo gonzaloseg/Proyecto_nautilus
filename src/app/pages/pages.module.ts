@@ -9,9 +9,6 @@ import { RelojesComponent } from './relojes/relojes.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
-import { TodosComponent } from './relojes/todos/todos.component';
-import { ClasicosComponent } from './relojes/clasicos/clasicos.component';
-import { ProfesionalesComponent } from './relojes/profesionales/profesionales.component';
 import { ProductoDetalleComponent } from './relojes/producto-detalle/producto-detalle.component';
 
 
@@ -26,9 +23,6 @@ import { ProductoDetalleComponent } from './relojes/producto-detalle/producto-de
     RelojesComponent,
     HeaderComponent,
     FooterComponent,
-    TodosComponent,
-    ClasicosComponent,
-    ProfesionalesComponent,
     ProductoDetalleComponent
   ],
   imports: [
@@ -44,9 +38,8 @@ import { ProductoDetalleComponent } from './relojes/producto-detalle/producto-de
     RelojesComponent,
     HeaderComponent,
     FooterComponent,
-    TodosComponent,
-    ClasicosComponent,
-    ProfesionalesComponent
+    ProductoDetalleComponent
+ 
   ]
 })
 export class PagesModule { }
