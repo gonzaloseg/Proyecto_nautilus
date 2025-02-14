@@ -1,0 +1,666 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>nautilus-proyecto documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">nautilus-proyecto documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NosotrosComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/nosotros/nosotros.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-nosotros</code></td>
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./nosotros.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./nosotros.component.css</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#videoId" >videoId</a>
+                            </li>
+                            <li>
+                                <a href="#videoTitle" >videoTitle</a>
+                            </li>
+                            <li>
+                                <a href="#videoUrl" >videoUrl</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sanitizer: DomSanitizer)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/pages/nosotros/nosotros.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sanitizer</td>
+                                                  
+                                                        <td>
+                                                                    <code>DomSanitizer</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="16"
+                                    class="link-to-prism">src/app/pages/nosotros/nosotros.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="videoId"></a>
+                    <span class="name">
+                        <span ><b>videoId</b></span>
+                        <a href="#videoId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;HNt0tm-oQ3Y&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/pages/nosotros/nosotros.component.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="videoTitle"></a>
+                    <span class="name">
+                        <span ><b>videoTitle</b></span>
+                        <a href="#videoTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;Video de YouTube&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/pages/nosotros/nosotros.component.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="videoUrl"></a>
+                    <span class="name">
+                        <span ><b>videoUrl</b></span>
+                        <a href="#videoUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>SafeResourceUrl</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/pages/nosotros/nosotros.component.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import {  OnInit } from &#x27;@angular/core&#x27;;
+import { DomSanitizer, SafeResourceUrl } from &#x27;@angular/platform-browser&#x27;;
+@Component({
+  selector: &#x27;app-nosotros&#x27;,
+  templateUrl: &#x27;./nosotros.component.html&#x27;,
+  styleUrl: &#x27;./nosotros.component.css&#x27;
+})
+export class NosotrosComponent {
+  videoId: string &#x3D; &#x27;HNt0tm-oQ3Y&#x27;; // 🔹 Reemplaza con el ID del video que quieres mostrar
+  videoTitle: string &#x3D; &#x27;Video de YouTube&#x27;; 
+  videoUrl!: SafeResourceUrl;
+
+  constructor(private sanitizer: DomSanitizer) {}
+//desde este punto sacamos el con el api el video de youtube
+  ngOnInit(): void {
+    this.videoUrl &#x3D; this.sanitizer.bypassSecurityTrustResourceUrl(&#x60;https://www.youtube.com/embed/${this.videoId}&#x60;);
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;head&gt;
+
+    &lt;link href&#x3D;&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel&#x3D;&quot;stylesheet&quot; integrity&#x3D;&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin&#x3D;&quot;anonymous&quot;&gt;
+    &lt;script src&#x3D;&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity&#x3D;&quot;sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K&quot; crossorigin&#x3D;&quot;anonymous&quot;&gt;&lt;/script&gt;
+    
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Nosotros&lt;/h1&gt;
+    &lt;p&gt; En Nautilus, fusionamos la tradición relojera con la innovación contemporánea para crear piezas que trascienden lo funcional y se transforman en símbolos de elegancia y distinción. Cada reloj que diseñamos es el resultado de un meticuloso proceso artesanal, utilizando materiales de alta calidad y mecanismos de precisión que garantizan durabilidad y exactitud.
+        
+        Nuestra colección abraza estilos diversos: desde diseños clásicos y atemporales hasta modelos vanguardistas y deportivos, siempre con un enfoque en la sofisticación y la comodidad. Para nosotros, cada detalle cuenta, y cada reloj cuenta una historia única.
+        
+        Ya sea para marcar un momento especial o para acompañarte en tu día a día, Nautilus es sinónimo de pasión por la excelencia. Descubre cómo el lujo y la funcionalidad pueden coexistir en tu muñeca.&lt;/p&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;img src&#x3D;&quot;/imagenes/square_FOTO_DE_PORTADA_Relojería_Antonio_Correa.jpg&quot;  width&#x3D;&quot;700px&quot; &gt;
+        &lt;div class&#x3D;&quot;text&quot;&gt;
+            &lt;h2&gt;Nuestros inicios&lt;/h2&gt;
+            &lt;p&gt;Toda nuestra historia se remonta a una pequeña relojería familiar que heredamos, y quisimos revolucionar el mercado sacando nuestra propia línea de relojes de alta calidad y totalmente artesanales&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+
+&lt;!--
+     En esta parte encontre una api que me daba fotos ramdom y la utilice para coger imagenes de trabajadores aleatorias
+--&gt;
+
+    &lt;div class&#x3D;&quot;equipo&quot;&gt;
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/men/32.jpg&quot; alt&#x3D;&quot;James Mitchell&quot;&gt;
+            &lt;h3&gt;James Mitchell&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Chief Technical Officer&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;James leads the tech strategy and innovation efforts at the company.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/women/44.jpg&quot; alt&#x3D;&quot;Sophia Benett&quot;&gt;
+            &lt;h3&gt;Sophia Benett&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Financial Analyst&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Sophia evaluates financial data and provides strategic insights.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/women/22.jpg&quot; alt&#x3D;&quot;Olivia Reed&quot;&gt;
+            &lt;h3&gt;Olivia Reed&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Product Manager&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Olivia oversees product development from concept to launch.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/women/57.jpg&quot; alt&#x3D;&quot;Emily Carter&quot;&gt;
+            &lt;h3&gt;Emily Carter&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Human Resources Manager&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Emily manages talent acquisition and workplace culture.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/men/50.jpg&quot; alt&#x3D;&quot;Alexander Rivera&quot;&gt;
+            &lt;h3&gt;Alexander Rivera&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Marketing Director&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Alexander drives our marketing campaigns and brand presence.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/men/40.jpg&quot; alt&#x3D;&quot;Daniel Foster&quot;&gt;
+            &lt;h3&gt;Daniel Foster&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Operations Manager&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Daniel ensures efficient daily operations and process optimization.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/women/75.jpg&quot; alt&#x3D;&quot;Julia Robins&quot;&gt;
+            &lt;h3&gt;Julia Robins&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Helper&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Julia Robins efficient daily operations and process optimization.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;miembro&quot;&gt;
+            &lt;img src&#x3D;&quot;https://randomuser.me/api/portraits/men/99.jpg&quot; alt&#x3D;&quot;Marcus Benitez&quot;&gt;
+            &lt;h3&gt;Marcus Benitez&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Helper &lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;Marcus Benitez efficient daily operations and process optimization.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 
+    Instale una api para poder meter videos y que no fuera una etiqueta de html sin mas
+    --&gt;
+
+    &lt;div class&#x3D;&quot;barra-horizontal&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;iframe 
+          *ngIf&#x3D;&quot;videoUrl&quot; 
+          [src]&#x3D;&quot;videoUrl&quot; 
+          width&#x3D;&quot;700&quot; 
+          height&#x3D;&quot;400&quot; 
+          frameborder&#x3D;&quot;0&quot; 
+          allowfullscreen&gt;
+        &lt;/iframe&gt;
+        &lt;div class&#x3D;&quot;text&quot;&gt;
+            &lt;h2&gt;Proceso de frabricación&lt;/h2&gt;
+            &lt;p&gt;Para cada uno de nuestros relojes dejamos grabados nuestra firma ya que le dedicamos un tiempo especial a cada uno de ellos prestando fiel atención al detalle y al posterior difrute del cliente&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;div class&#x3D;&quot;barra-horizontal&quot;&gt;&lt;/div&gt;
+    
+&lt;/body&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><head>    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFyGRTmaE6rS+pZt6GOcXbNC7DfwQf6LvbtC3ENNENRVLDjlC1N4g7AJ6K" crossorigin="anonymous"></script>    </head><body>    <h1>Nosotros</h1>    <p> En Nautilus, fusionamos la tradición relojera con la innovación contemporánea para crear piezas que trascienden lo funcional y se transforman en símbolos de elegancia y distinción. Cada reloj que diseñamos es el resultado de un meticuloso proceso artesanal, utilizando materiales de alta calidad y mecanismos de precisión que garantizan durabilidad y exactitud.                Nuestra colección abraza estilos diversos: desde diseños clásicos y atemporales hasta modelos vanguardistas y deportivos, siempre con un enfoque en la sofisticación y la comodidad. Para nosotros, cada detalle cuenta, y cada reloj cuenta una historia única.                Ya sea para marcar un momento especial o para acompañarte en tu día a día, Nautilus es sinónimo de pasión por la excelencia. Descubre cómo el lujo y la funcionalidad pueden coexistir en tu muñeca.</p>    <div class="container">        <img src="/imagenes/square_FOTO_DE_PORTADA_Relojería_Antonio_Correa.jpg"  width="700px" >        <div class="text">            <h2>Nuestros inicios</h2>            <p>Toda nuestra historia se remonta a una pequeña relojería familiar que heredamos, y quisimos revolucionar el mercado sacando nuestra propia línea de relojes de alta calidad y totalmente artesanales</p>        </div>    </div><!--     En esta parte encontre una api que me daba fotos ramdom y la utilice para coger imagenes de trabajadores aleatorias-->    <div class="equipo">        <div class="miembro">            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Mitchell">            <h3>James Mitchell</h3>            <p><strong>Chief Technical Officer</strong></p>            <p>James leads the tech strategy and innovation efforts at the company.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophia Benett">            <h3>Sophia Benett</h3>            <p><strong>Financial Analyst</strong></p>            <p>Sophia evaluates financial data and provides strategic insights.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Olivia Reed">            <h3>Olivia Reed</h3>            <p><strong>Product Manager</strong></p>            <p>Olivia oversees product development from concept to launch.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="Emily Carter">            <h3>Emily Carter</h3>            <p><strong>Human Resources Manager</strong></p>            <p>Emily manages talent acquisition and workplace culture.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Alexander Rivera">            <h3>Alexander Rivera</h3>            <p><strong>Marketing Director</strong></p>            <p>Alexander drives our marketing campaigns and brand presence.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Daniel Foster">            <h3>Daniel Foster</h3>            <p><strong>Operations Manager</strong></p>            <p>Daniel ensures efficient daily operations and process optimization.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="Julia Robins">            <h3>Julia Robins</h3>            <p><strong>Helper</strong></p>            <p>Julia Robins efficient daily operations and process optimization.</p>        </div>        <div class="miembro">            <img src="https://randomuser.me/api/portraits/men/99.jpg" alt="Marcus Benitez">            <h3>Marcus Benitez</h3>            <p><strong>Helper </strong></p>            <p>Marcus Benitez efficient daily operations and process optimization.</p>        </div>    </div>    <!--     Instale una api para poder meter videos y que no fuera una etiqueta de html sin mas    -->    <div class="barra-horizontal"></div>    <div class="container">        <iframe           *ngIf="videoUrl"           [src]="videoUrl"           width="700"           height="400"           frameborder="0"           allowfullscreen>        </iframe>        <div class="text">            <h2>Proceso de frabricación</h2>            <p>Para cada uno de nuestros relojes dejamos grabados nuestra firma ya que le dedicamos un tiempo especial a cada uno de ellos prestando fiel atención al detalle y al posterior difrute del cliente</p>        </div>      </div>    <div class="barra-horizontal"></div>    </body></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CestaComponent', 'selector': 'app-cesta'},{'name': 'ContactaComponent', 'selector': 'app-contacta'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InterfaceComponent', 'selector': 'app-interface'},{'name': 'NosotrosComponent', 'selector': 'app-nosotros'},{'name': 'NovedadesComponent', 'selector': 'app-novedades'},{'name': 'ProductoDetalleComponent', 'selector': 'app-producto-detalle'},{'name': 'RelojesComponent', 'selector': 'app-relojes'},{'name': 'ServicesComponent', 'selector': 'app-services'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NosotrosComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NosotrosComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

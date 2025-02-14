@@ -7,7 +7,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { NovedadesComponent } from './pages/novedades/novedades.component';
 import { ContactaComponent } from './pages/contacta/contacta.component';
 import { RelojesComponent } from './pages/relojes/relojes.component';
-import { ProductoDetalleComponent } from './pages/relojes/producto-detalle/producto-detalle.component';
+import { ProductoDetalleComponent } from './pages/producto-detalle/producto-detalle.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'novedades', component: NovedadesComponent },
   { path: 'contacta', component: ContactaComponent },
   { path: 'relojes', component: RelojesComponent },
-  { path: 'relojes/producto/:id', component: ProductoDetalleComponent }, // Ruta dentro de profesionales
+  { path: 'producto-detalle/:id', component: ProductoDetalleComponent },
   {path: '', redirectTo:'/inicio', pathMatch:'full'}
   
 ];

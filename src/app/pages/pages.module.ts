@@ -9,7 +9,7 @@ import { RelojesComponent } from './relojes/relojes.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
-import { ProductoDetalleComponent } from './relojes/producto-detalle/producto-detalle.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 
 
 

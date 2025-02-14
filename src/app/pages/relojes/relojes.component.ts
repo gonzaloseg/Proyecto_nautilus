@@ -30,6 +30,6 @@ export class RelojesComponent {
      */
     verDetalles(producto: any) {
       this.productoservicio.seleccionarProducto(producto);
-      this.router.navigate(['/producto', producto.id]);
+      this.router.navigate(['/producto-detalle', producto.id]);
    }
 }

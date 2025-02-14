@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';  // Asegúrate de que esté importado correctamente
-import { RelojesComponent } from '../relojes.component';
+import { RelojesComponent } from '../relojes/relojes.component';
 
 @Component({
   selector: 'app-producto-detalle',
