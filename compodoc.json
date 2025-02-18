@@ -1,6 +1,6 @@
 {
     "title": "Documentación del proyecto",
-    "output": "./Documentacionpn",
+    "output": "./Documentacion",
     "port":"8081",
     "server": "true"    
 }

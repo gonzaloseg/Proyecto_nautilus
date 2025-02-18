@@ -1,1 +1,6 @@
-<p>cesta works!</p>
+<h2>Mi Cesta</h2>
+<ul>
+  <li *ngFor="let producto of cesta">
+    {{ producto.nombre }} - {{ producto.precio }} €
+  </li>
+</ul>

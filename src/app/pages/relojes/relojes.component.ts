@@ -30,6 +30,11 @@ export class RelojesComponent {
      */
     verDetalles(producto: any) {
       this.productoservicio.seleccionarProducto(producto);
+
+      //console.log(this.productoservicio.seleccionarProducto(producto));
       this.router.navigate(['/producto-detalle', producto.id]);
+   }
+   mostrarporlacara(){
+    console.log("holaaaa");
    }
 }
