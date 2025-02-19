@@ -1,104 +1,60 @@
-/* Estilo para el título */
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Contenedor de los botones */
-  div {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo para los enlaces (botones) */
-  a {
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  /* Efecto hover */
-  a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilo para el enlace activo */
-  a.active {
-    background-color: #28a745;
-  }
-  /* Contenedor de la lista */
-
-body{
-  background-color: black;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Cada tarjeta de producto */
-li {
-  background: rgb(255, 255, 255);
+.detalle {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 220px;
-  transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto hover en la tarjeta */
-li:hover {
+.imagen-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.imagen-contenedor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imagen-contenedor img:hover {
   transform: scale(1.05);
 }
 
-/* Imagen del producto */
-img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Nombre del producto */
-h3 {
-  font-size: 1.3rem;
+h1 {
+  font-size: 24px;
   color: #333;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
-/* Precio */
 p {
-  font-size: 1.1rem;
-  color: #4b4f53;
-  font-weight: bold;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-/* Botón de detalles */
-a {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  background: #2a312c;
-  color: white;
-  padding: 8px 12px;
+strong {
+  color: #000;
+}
+
+button {
+  background: #747372;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
   border-radius: 5px;
-  font-size: 1rem;
-  transition: background 0.3s ease-in-out;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* Efecto hover en el botón */
-a:hover {
-  background: #2e312f;
+button:hover {
+  background: #e64a19;
 }
