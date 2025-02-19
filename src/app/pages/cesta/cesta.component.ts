@@ -8,6 +8,14 @@ import { ViewChild } from '@angular/core';
   styleUrl: './cesta.component.css'
 })
 export class CestaComponent  implements AfterViewInit {
+
+  cesta: any[] = [];
+
+  constructor(private cestaService: CestaService) {}
+
+  ngOnInit() {
+    this.cesta = this.cestaService.obtenerCesta();
+  }
   @ViewChild('paypalContainer', { static: false }) paypalElement!: ElementRef;
 
 
@@ -17,7 +25,7 @@ export class CestaComponent  implements AfterViewInit {
         createOrder: (data: any, actions: any) => {
           return actions.order.create({
             purchase_units: [{
-              amount: { value: '100.00' }
+              amount: { value: this.cesta.reduce((a: number, b: any) => a + b.precio, 0) }
             }]
           });
         },
@@ -43,11 +51,5 @@ export class CestaComponent  implements AfterViewInit {
     });
   }
 
-  cesta: any[] = [];
-
-  constructor(private cestaService: CestaService) {}
-
-  ngOnInit() {
-    this.cesta = this.cestaService.obtenerCesta();
-  }
+  
 }

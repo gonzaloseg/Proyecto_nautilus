@@ -2,6 +2,8 @@
 <ul>
   <li *ngFor="let producto of cesta">
     {{ producto.nombre }} - {{ producto.precio }} €
+    <img [src]="producto.imagen" alt="{{ producto.nombre }}" width="50" height="400">
   </li>
+
   <div #paypalContainer></div>
 </ul>
