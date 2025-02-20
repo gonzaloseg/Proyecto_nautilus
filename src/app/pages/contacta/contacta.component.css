@@ -1,4 +1,4 @@
-/* Reset básico de márgenes y padding */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -11,45 +11,48 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    margin-top: 0;  /* Elimina el margen superior por defecto */
 }
 
-/* Estilo para el header */
+/* Header */
 header {
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 20px 0; /* Asegúrate de que el padding sea adecuado para el tamaño que deseas */
+    padding: 20px 0;
     text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-    font-size: 24px;  /* Tamaño del texto en el header */
+    font-size: 24px;
 }
 
-/* Contenedor del formulario y las redes sociales */
+/* Contenedor principal centrado */
 .contacto-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #b1aeae;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 600px;
-    margin-top: 120px; /* Asegura que el formulario no se oculte detrás del header */
+    max-width: 900px;
+    margin: auto; /* Centra horizontalmente */
+    position: relative;
+    top: 50%;
+    transform: translateY(10%); /* Centra verticalmente */
+    gap: 20px;
 }
 
-/* Estilo para el formulario de contacto */
+/* Formulario a la izquierda */
 .contacto-formulario {
-    width: 100%;
-    margin-bottom: 20px;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
 }
 
 .contacto-formulario h2 {
@@ -63,16 +66,18 @@ header {
     font-weight: bold;
 }
 
-.contacto-formulario input, 
+.contacto-formulario input,
 .contacto-formulario textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    transition: border 0.3s ease-in-out;
 }
 
+/* Botón de envío */
 .contacto-formulario button {
     background-color: #4CAF50;
     color: white;
@@ -88,9 +93,10 @@ header {
     background-color: #45a049;
 }
 
-/* Estilo para la sección de redes sociales */
+/* Sección de redes sociales */
 .contacto-redes {
     text-align: center;
+    margin-top: 20px;
 }
 
 .contacto-redes h3 {
@@ -113,4 +119,49 @@ header {
 
 .social-icon:hover {
     color: #4CAF50;
+}
+
+/* Estilos para validaciones */
+.invalid {
+    border: 2px solid red !important;
+}
+
+.valid {
+    border: 2px solid green !important;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Imagen del mapa a la derecha */
+.contacto-mapa {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.contacto-mapa img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: En pantallas pequeñas, el mapa se coloca debajo */
+@media (max-width: 768px) {
+    .contacto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        margin-top: 20px;
+    }
 }

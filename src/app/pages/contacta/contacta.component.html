@@ -1,37 +1,58 @@
+<div class="contacto-container">
+    <div class="contacto-formulario">
+        <h2>Contacto</h2>
+        <form #contactForm="ngForm" (ngSubmit)="enviar(contactForm)">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Tienda de Relojes</title>
-    <link rel="stylesheet" href="contacta.component.css">
-</head>
-<body>
-    <div class="contacto-container">
-        <div class="contacto-formulario">
-            <h2>Contacto</h2>
-            <form action="#" method="POST">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <!-- Campo Nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required [(ngModel)]="model.nombre" #nombre="ngModel"
+                [ngClass]="{'invalid': nombre.invalid && nombre.touched, 'valid': nombre.valid}">
+            <div class="error-message" *ngIf="nombre.invalid && nombre.touched">El nombre es obligatorio</div>
 
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" name="correo" required>
+            <!-- Campo Correo Electrónico con validación -->
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required [(ngModel)]="model.correo" #correo="ngModel"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                [ngClass]="{'invalid': correo.invalid && correo.touched, 'valid': correo.valid}">
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-
-        <div class="contacto-redes">
-            <h3>Síguenos en nuestras redes sociales</h3>
-            <div class="redes-sociales">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
-                <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+            <!-- Mensajes de error -->
+            <div class="error-message" *ngIf="correo.touched && correo.invalid">
+                <span *ngIf="correo.errors && correo.errors['required']">El correo es obligatorio.</span>
+                <span *ngIf="correo.errors && correo.errors['pattern']">Ingrese un correo válido.</span>
             </div>
+
+
+
+            <!-- Campo Mensaje -->
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required [(ngModel)]="model.mensaje" #mensaje="ngModel"
+                [ngClass]="{'invalid': mensaje.invalid && mensaje.touched, 'valid': mensaje.valid}">
+        </textarea>
+            <div class="error-message" *ngIf="mensaje.invalid && mensaje.touched">El mensaje no puede estar vacío</div>
+
+            <!-- Botón Enviar -->
+            <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Imagen del mapa -->
+    <div class="contacto-mapa">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.028769235078!2d-6.0450059!3d37.375855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126cc0ff5d3bd9%3A0xf8012d6a9ca5cb6d!2sTomares%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1708444345000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+
+    </div>
+</div>
+    <!-- Sección de redes sociales -->
+    <div>
+
+    <div class="contacto-redes">
+        <h3>Síguenos en nuestras redes sociales</h3>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
         </div>
     </div>
-    
-</body>
-
+</div>

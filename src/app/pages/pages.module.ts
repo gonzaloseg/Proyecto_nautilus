@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
 
 
@@ -27,7 +28,8 @@ import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.co
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule 
   ],
   exports:[
     ContactaComponent,
