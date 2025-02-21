@@ -1,16 +1,21 @@
-
-
-<!-- Botones de Categorías -->
-
 <body>
+  <!-- Título principal -->
   <h1>Relojes</h1>
-   <ul>
-    <li *ngFor="let producto of productos">
+
+  <!-- Lista de productos con *ngFor para iterar sobre cada producto -->
+  <ul>
+    <li *ngFor="let producto of productos"> <!-- Recorre el array de productos -->
+      <!-- Muestra la imagen del producto -->
       <img [src]="producto.imagen" alt="{{ producto.nombre }}" width="50" height="400">
+      
+      <!-- Nombre del producto -->
       <h3>{{ producto.nombre }}</h3>
-      <p>Precio: {{ producto.precio |currency }}</p>
-      <button (click)="verDetalles(producto)">ver detalles</button>
+      
+      <!-- Precio del producto formateado como moneda -->
+      <p>Precio: {{ producto.precio | currency }}</p>
+      
+      <!-- Botón para ver los detalles del producto -->
+      <button (click)="verDetalles(producto)">Ver detalles</button>
     </li>
   </ul> 
-  </body>
-  
+</body>

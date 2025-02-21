@@ -1,9 +1,18 @@
 <div class="detalle">
+  <!-- Contenedor de la imagen del producto -->
   <div class="imagen-contenedor">
     <img [src]="producto.imagen" [alt]="producto.nombre" />
   </div>
+
+  <!-- Nombre del producto -->
   <h1>{{ producto.nombre }}</h1>
+
+  <!-- Descripción del producto -->
   <p>{{ producto.descripcion }}</p>
+
+  <!-- Precio formateado como moneda -->
   <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
+
+  <!-- Botón para añadir el producto a la cesta -->
   <button (click)="agregarACesta()">Añadir a la cesta</button>
 </div>

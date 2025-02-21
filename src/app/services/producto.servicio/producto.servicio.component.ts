@@ -19,26 +19,29 @@ export class productoservicio {
     { id: 12, nombre: 'WXB7946', precio: 420, imagen: '/imagenes/Captura de pantalla 2025-02-13 124733.png', descripcion: 'Reloj juvenil con correa de nylon y diseño moderno, ideal para cualquier ocasión.' }
   ];
 
+// Variable privada para almacenar el producto actualmente seleccionado
+private productoSeleccionado: any = null;
 
-      
-      private productoSeleccionado: any = null;
+// Constructor vacío (puede ser útil si se inyectan dependencias más adelante)
+constructor() {}
 
-  constructor() {}
+// Devuelve la lista completa de productos
+obtenerProductos() {
+  return this.productos;
+}
 
-  obtenerProductos() {
-    return this.productos;
-  }
+// Busca un producto por su ID
+obtenerProductoPorId(id: number) {
+  return this.productos.find(prod => prod.id === id);
+}
 
-  obtenerProductoPorId(id: number) {
-    return this.productos.find(prod => prod.id === id);
-  }
+// Selecciona un producto específico y lo guarda en la variable productoSeleccionado
+seleccionarProducto(producto: any) {
+  this.productoSeleccionado = producto;
+}
 
-  seleccionarProducto(producto: any) {
-    this.productoSeleccionado = producto;
-  }
-
-  obtenerProductoSeleccionado() {
-    return this.productoSeleccionado;
- }
-      
+// Devuelve el producto que se ha seleccionado previamente
+obtenerProductoSeleccionado() {
+  return this.productoSeleccionado;
+}
 }
