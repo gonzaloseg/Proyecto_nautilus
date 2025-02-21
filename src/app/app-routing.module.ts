@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CestaComponent } from './pages/cesta/cesta.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
-
 import { NovedadesComponent } from './pages/novedades/novedades.component';
 import { ContactaComponent } from './pages/contacta/contacta.component';
 import { RelojesComponent } from './pages/relojes/relojes.component';

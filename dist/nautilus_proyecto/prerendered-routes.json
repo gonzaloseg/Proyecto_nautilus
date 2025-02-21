@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/cesta",
+    "/contacta",
+    "/inicio",
+    "/nosotros",
+    "/novedades",
+    "/relojes"
+  ]
+}
